@@ -16,8 +16,6 @@ inoremap <silent> jj <ESC>
 
 let mapleader="\<Space>"
 
-nnoremap <ESC> :nohlsearch<CR>
-
 nnoremap <silent><Leader>w :w<CR>
 nnoremap <silent><Leader>q :q<CR>
 
@@ -25,6 +23,7 @@ nnoremap <silent><Leader>sh <C-w>h
 nnoremap <silent><Leader>sj <C-w>j
 nnoremap <silent><Leader>sk <C-w>k
 nnoremap <silent><Leader>sl <C-w>l
+
 filetype plugin indent on
 
 " sound
@@ -36,15 +35,16 @@ colorscheme desert
 
 syntax on
 
+set noswapfile
 set number
 set cursorline
 set hlsearch
 set ambiwidth=double
 
 " autocmd
-augroup vimGroup
-  autocmd!
-  if argc() == 0
-    autocmd VimEnter * execute 'Ex'
+augroup Enter
+  au!
+  if !argc()
+    au VimEnter * execute 'Ex'
   endif
 augroup END
