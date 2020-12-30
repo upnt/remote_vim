@@ -16,14 +16,6 @@ inoremap <silent> jj <ESC>
 
 let mapleader="\<Space>"
 
-nnoremap <silent><Leader>w :w<CR>
-nnoremap <silent><Leader>q :q<CR>
-
-nnoremap <silent><Leader>sh <C-w>h
-nnoremap <silent><Leader>sj <C-w>j
-nnoremap <silent><Leader>sk <C-w>k
-nnoremap <silent><Leader>sl <C-w>l
-
 filetype plugin indent on
 
 " sound
@@ -37,14 +29,6 @@ syntax on
 
 set noswapfile
 set number
+set relativenumber
 set cursorline
 set hlsearch
-set ambiwidth=double
-
-" autocmd
-augroup Enter
-  au!
-  if !argc()
-    au VimEnter * execute 'Ex'
-  endif
-augroup END
