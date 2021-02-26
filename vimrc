@@ -12,7 +12,7 @@ set scrolloff=5
 set splitright
 
 " mapping
-inoremap <silent> jj <ESC>
+inoremap <silent> <C-j> <ESC>
 
 let mapleader="\<Space>"
 
