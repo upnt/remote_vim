@@ -1,1 +1,2 @@
-cp .vimrc ~/
+mkdir ~/.vim
+cp vimrc ~/.vim
